@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  margin: 0px;
+}
+
+nav {
+  background-color: rgb(220, 220, 220);
+  height: 60px;
+  width: 100%;
+  margin: 0px;
+  top:0;
+  padding: 0px;
+  position: fixed;
+}
+
+li {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(122, 118, 119);
+  display: inline;
+  list-style: none;
+  text-decoration: none;
+  margin-left: 45px;
+  font-size: 18px;
+}
+
+.thread {
+  width: 25%;
+  margin-top: 40px;
+  margin-left: 4%;
+  float: left;
+}
+
+.chair {
+  width: 25%;
+  margin-top: 40px;
+  margin-right: 4%;
+  margin-left: 4%;
+  float: left;
+}
+
+.text{
+  width: 32%;
+  float: left;
+  margin-top: 40px;
+  margin-left: 3%;
+  margin-right: 3%;
+  font-size: 20px;
+}
+
+.welcome {
+float: left;
+display: inline-block;;
+}
+
+.hands {
+  float:right;
+  margin-right: 10%;
+  width: 45%;
+  margin-top: 45px;
+}
+
+#contact {
+  float: left;
+  width: 30%;
+  margin-top: 50px;
+  margin-left: 10%;
+}
+
+#wendy {
+  width: 45%;
+  margin-left: 4%;
+  margin-top: 50px;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 75px;
+  font-size: 40px;
+  font-family: 'Slabo 27px', serif;
+}
+
+footer {
+  background-color: rgb(220, 220, 220);
+  height: 60px;
+  width: 100%;
+  bottom: 0;
+  position: relative;
+  clear: both;
+  margin-top: 15px;
+}
