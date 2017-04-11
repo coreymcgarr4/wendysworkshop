@@ -46,17 +46,19 @@ li {
   width: 25%;
   margin-top: 40px;
   margin-right: 4%;
-  margin-left: 4%;
-  float: left;
+  /*margin-left: 4%;*/
+  float: right;
+  margin-bottom: 45px;
 }
 
 .text{
   width: 32%;
   float: left;
   margin-top: 40px;
-  margin-left: 3%;
+  margin-left: 4.5%;
   margin-right: 3%;
   font-size: 20px;
+  text-align: center;
 }
 
 .welcome {
@@ -69,6 +71,7 @@ display: inline-block;;
   margin-right: 10%;
   width: 45%;
   margin-top: 45px;
+  padding-left: 1%;
 }
 
 #contact {
@@ -82,6 +85,9 @@ display: inline-block;;
   width: 45%;
   margin-left: 4%;
   margin-top: 50px;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 45px;
 }
 
 h3 {
@@ -99,4 +105,49 @@ footer {
   position: relative;
   clear: both;
   margin-top: 15px;
+  padding-top: 13px;
+  padding-left: 15px;
+  font-size: 12px;
+}
+
+#about {
+  float: left;
+  width: 47%;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+#copyright {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(122, 118, 119);
+  display: inline;
+  float: left;
+}
+
+#icons {
+  margin-right: 5%;
+}
+
+i {
+  float: right;
+  display: inline;
+  margin-right: 2%;
+}
+
+#form {
+  font-family: 'Slabo 27px', serif;
+}
+
+/*.form {
+  width: 45%;
+  margin-left: 5%;
+  margin-right: 5%;
+}*/
+
+.btn {
+  margin-bottom: 45px;
+}
+
+input {
+  width: 375px;
 }

@@ -1,12 +1,12 @@
 <h3>We'd Love to Hear From You!</h3>
 
 <div class='form'>
-<form id='contact' action='/' method='post'>
+<form id='contact' ng-submit="postMessage(message)" action='/complete' method='post'>
   <p id='form'>Your Name: </br>
     <input type='text' name='name' maxlength='50' />
   </p>
   <p id='form'>E-mail Address: </br>
-    <input type='text' name='email' maxlength='50' />
+    <input type='email' name='email' maxlength='50' />
   </p>
   <p id='form'>Subject: </br>
     <input type='text' name='subject' maxlength='50' />
