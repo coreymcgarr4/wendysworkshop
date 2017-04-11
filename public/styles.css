@@ -30,7 +30,7 @@ li {
   display: inline;
   list-style: none;
   text-decoration: none;
-  margin-left: 45px;
+  margin-left: 55px;
   margin-top: 50px;
   font-size: 16px;
 }
@@ -54,7 +54,7 @@ li {
 .text{
   width: 32%;
   float: left;
-  margin-top: 40px;
+  margin-top: 75px;
   margin-left: 4.5%;
   margin-right: 3%;
   font-size: 20px;
@@ -150,4 +150,12 @@ i {
 
 input {
   width: 375px;
+}
+
+#mainlogo {
+  width: 90%;
+  /*float: left;*/
+  margin-top: 85px;
+  margin-left: 4.5%;
+  margin-right: 3%;
 }

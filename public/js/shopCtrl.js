@@ -1,8 +1,8 @@
 angular.module('app')
-.controller('mainCtrl', function($scope, mainService){
+.controller('shopCtrl', function($scope, shopService){
 
   $scope.getProducts = function(){
-    var promise = mainService.getProducts();
+    var promise = shopService.getProducts();
 
     promise.then(function(results){
       $scope.product = results;

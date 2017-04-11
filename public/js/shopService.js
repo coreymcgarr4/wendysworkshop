@@ -1,5 +1,5 @@
 angular.module('app')
-.service('mainService', function($http){
+.service('shopService', function($http){
 
   this.getProducts = function(){
     console.log();
