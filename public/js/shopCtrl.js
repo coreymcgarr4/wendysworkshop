@@ -9,4 +9,13 @@ angular.module('app')
       console.log(results);
     });
   }
+
+  $scope.getSearch = function(query){
+    var promise = shopService.getSearch(query);
+  
+    promise.then(function(results){
+      $scope.item = results;
+      console.log(results);
+    })
+  }
 });

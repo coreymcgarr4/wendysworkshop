@@ -159,3 +159,35 @@ input {
   margin-left: 4.5%;
   margin-right: 3%;
 }
+
+.searchbutton {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(122, 118, 119);
+  display: inline;
+  list-style: none;
+  text-decoration: none;
+  margin-right: 2%;
+  margin-top: -2px;
+  font-size: 16px;
+  float: right;
+  /*width: 250px;*/
+  margin-left: 5px;
+  padding: 6px 12px;
+}
+
+.searchbar {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(122, 118, 119);
+  display: inline;
+  list-style: none;
+  text-decoration: none;
+  margin-top: -2px;
+  margin-right: 2%;
+  font-size: 16px;
+  float: right;
+  /*width: 20px;*/
+}
+
+button {
+  width: 2px;
+}

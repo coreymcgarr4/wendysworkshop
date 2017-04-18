@@ -17,6 +17,9 @@
       <li><a ui-sref='shop' ng-click='getProducts()'>Shop</a></li>
       <li><a ui-sref='about'>About</a></li>
       <li><a ui-sref='contact'>Contact</a></li>
+      <li class='searchbutton'><input type='button' value='Go!' ng-click='getSearch(query)' ui-sref='shop' /></li>
+      <li class='searchbar'><input type='text' ng-model='query' placeholder='Enter your search here...' /></li>
+
     </ul>
   </nav>
 
