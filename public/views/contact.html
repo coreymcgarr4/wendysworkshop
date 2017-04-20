@@ -13,9 +13,9 @@
         <p>Subject: </br>
           <input type='text' maxlength='50' ng-model='subject' />
         <p>Message:</p>
-          <textarea cols='60'rows='14' ng-model='message'>Enter your message...</textarea>
+          <textarea cols='60'rows='14' ng-model='message' placeholder='Enter your message...'></textarea>
         </br>
-        <button ng-click="addMessage(name, email, subject, message)">Send Message!</button>
+        <button ng-click="addMessage(name, email, subject, message)" class='send-message-button'>Send Message!</button>
     </div>
 
     <div class='hands'>

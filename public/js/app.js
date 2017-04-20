@@ -8,8 +8,7 @@ angular.module('app', ['ui.router'])
   })
   .state('shop', {
     templateUrl: '../views/shop.html',
-    url: '/shop',
-    // controller: 'shopCtrl'
+    url: '/shop'
   })
   .state('about', {
     templateUrl: '../views/about.html',
@@ -20,14 +19,10 @@ angular.module('app', ['ui.router'])
     url: '/contact',
     controller: 'messCtrl'
   })
-  .state('cart', {
-    templateUrl: '../views/cart.html',
-    url: '/cart'
-  })
-  .state('contact-complete', {
-    templateUrl: '../views/contact-complete.html',
-    url: '/complete'
-  })
+  // .state('cart', {
+  //   templateUrl: '../views/cart.html',
+  //   url: '/cart'
+  // })
   .state('subscribe', {
     templateUrl: '../views/subscribe.html',
     url: '/subscribe',
