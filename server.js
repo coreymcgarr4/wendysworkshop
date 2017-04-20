@@ -1,82 +1,87 @@
 const express = require('express');
-// const router = require('koa-router');
 const bodyParser = require('body-parser');
 const config = require('./.config.js');
-// const crypto = require('crypto');
-// const axios = require('axios');
 const cors = require('cors');
-var amazon = require('amazon-product-api');
+const amazon = require('amazon-product-api');
+const massive = require('massive');
 
-var app = express();
+const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
+var massiveInstance = massive.connectSync({
+  connectionString : 'postgres://localhost/coreymcgarr'
+});
+
 var client = amazon.createClient({
   awsId: 'AKIAIGAPYFQ4SQ7BCLPQ',
-  awsSecret: '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',
+  awsSecret: config.secretKey,
   awsTag: '005282830887'
 });
 
-app.get('/api/search/:query', function(req, res){
-  client.itemSearch({
-    keywords: req.params.query,
+app.set('db', massiveInstance);
+var db = app.get('db');
 
-    responseGroup: 'ItemAttributes,Offers,Images'
-  }).then(function(results){
-    console.log(results);
-    res.status(200).send(results);
-  }).catch(function(err){
-    console.log(err);
-  });
+app.get('/api/productasin', function(req, res){
+  db.get_all_asins([], function(err, products){
+    if(err){
+      res.send(400).send(err);
+      return;
+    }
+    var asins = products.splice(0, 10);
+    var asinArray = [];
+    for (var i = 0; i < asins.length; i++){
+      asinArray.push(asins[i].asin);
+    }
+    client.itemLookup({
+    itemId: asinArray,
+    ResponseGroup: 'ItemAttributes,Offers,Images'
+    }).then(function(results){
+      res.send(results);
+    }).catch(function(err){
+      console.log(err);
+      res.send(err);
+    })
+  })
 })
 
-// client.itemSearch({
-//   director: 'Quentin Tarantino',
-//   actor: 'Samuel L. Jackson',
-//   searchIndex: 'DVD',
-//   audienceRating: 'R',
-//   responseGroup: 'ItemAttributes,Offers,Images'
-// }).then(function(results){
-//   console.log(results);
-// }).catch(function(err){
-//   console.log(err);
-// });
+app.get('/api/search/:query', function(req, res){
+  db.get_all_products(['%' + req.params.query + '%'], function(err, products){
+    if(err){
+      res.send(400).send(err);
+      return;
+    }
+    var asins = products;
+    var asinArray = [];
+    for (var x = 0; x < asins.length; x++){
+      asinArray.push(asins[x].asin);
+    }
+    client.itemLookup({
+    itemId: asinArray.splice(0, 10),
+    ResponseGroup: 'ItemAttributes,Offers,Images'
+    }).then(function(results){
+      res.send(results);
+    }).catch(function(err){
+      console.log(err);
+      res.send(err);
+      })
+    })
+  })
 
-// console.log(req.params.query);
-// var d = new Date();
-// var unsignedUrl = 'http://webservices.amazon.com/onca/xml?AWSAccessKeyId=AKIAIGAPYFQ4SQ7BCLPQ&AssociateTag=005282830887&Keywords=' + req.params.query + '&Operation=ItemSearch&ResponseGroup=Images,ItemAttributes&SearchIndex=All&Service=AWSECommerceService&Timestamp=';
-// var string = `GET
-//               webservices.amazon.com
-//               /onca/xml
-//               AWSAccessKeyId=AKIAIGAPYFQ4SQ7BCLPQ&AssociateTag=005282830887&Keywords=${req.params.query}&Operation=ItemSearch&ResponseGroup=Images,ItemAttributes&SearchIndex=All&Service=AWSECommerceService&Timestamp=${d.toUTCString()}`;
-//
-// function generateHmac(string, secretKey, algorithm, encoding){
-//   encoding = encoding || 'base64';
-//   algorithm = algorithm || 'sha256';
-//   return crypto.createHmac(algorithm, secretKey).update(string).digest(encoding);
-// }
-//
-// var rfc2104Hmac = generateHmac(string, config.secretKey);
-//
-// console.log(rfc2104Hmac);
-//
-//   axios({
-//   method: 'GET',
-//   url: unsignedUrl + d.toUTCString() + '&Signature=' + rfc2104Hmac
-// }).then(function(response){
-//   console.log(response);
-// })
 
-// });
+  app.post('/api/subscribers/:name/:email', function(req, res){
+    db.add_subscriber([req.params.name, req.params.email], function(err, person){
+      res.send(person);
+    })
+  })
 
-// app.post('/complete', function(req, res) {
-//   console.log(req);
-//   res.send('Name: ' + req.body.name);
-//   res.send('Email: ' + req.body.email);
-//   res.send('Subject: ' + req.body.subject);
-//   res.send('Message: ' + req.body.message);
-// });
+  app.post('/api/messages/:name/:email/:subject/:message', function(req, res){
+    db.add_message([req.params.name, req.params.email, req.params.subject, req.params.message], function(err, message){
+      res.send(message);
+    })
+  })
+
 
 app.listen(3000, function(){
   console.log('Listening on 3000');

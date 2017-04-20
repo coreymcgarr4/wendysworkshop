@@ -1,2 +1,11 @@
+<!-- <body ng-controller='shopCtrl'> -->
 <h3>Shop Wendy's Workshop!</h3>
-<input type='text' placeholder='Enter your search here...'></input>
+
+<div class='results' ng-repeat='item in items'>
+  <div class='result'>
+    <div class='thumbnail center'><img ng-src='{{item.MediumImage[0].URL[0]}}'></div>
+    <div class='title center'>{{item.ItemAttributes[0].Title[0]}}</div>
+    <div><a target='_blank' href='{{item.ItemLinks[0].ItemLink[6].URL[0]}}'><img class='shop-now-button center' src='./images/shop-now.png'></a></div>
+  </div>
+</div>
+<!-- </body> -->

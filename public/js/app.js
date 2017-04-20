@@ -8,7 +8,8 @@ angular.module('app', ['ui.router'])
   })
   .state('shop', {
     templateUrl: '../views/shop.html',
-    url: '/shop'
+    url: '/shop',
+    // controller: 'shopCtrl'
   })
   .state('about', {
     templateUrl: '../views/about.html',
@@ -16,7 +17,8 @@ angular.module('app', ['ui.router'])
   })
   .state('contact', {
     templateUrl: '../views/contact.html',
-    url: '/contact'
+    url: '/contact',
+    controller: 'messCtrl'
   })
   .state('cart', {
     templateUrl: '../views/cart.html',
@@ -25,6 +27,11 @@ angular.module('app', ['ui.router'])
   .state('contact-complete', {
     templateUrl: '../views/contact-complete.html',
     url: '/complete'
+  })
+  .state('subscribe', {
+    templateUrl: '../views/subscribe.html',
+    url: '/subscribe',
+    controller: 'subCtrl'
   });
 
   $urlRouterProvider.otherwise('/');

@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/coreymcgarr4/wendysworkshop/issues"
   },
-  "homepage": "https://github.com/coreymcgarr4/wendysworkshop#readme"
+  "homepage": "https://github.com/coreymcgarr4/wendysworkshop#readme",
+  "dependencies": {
+    "massive": "^2.6.0"
+  }
 }

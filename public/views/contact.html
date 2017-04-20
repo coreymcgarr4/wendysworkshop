@@ -1,22 +1,28 @@
-<h3>We'd Love to Hear From You!</h3>
+  <div ng-show='showForm'>
+    <h3>We'd Love to Hear From You!</h3>
+  </div>
 
-<div class='form'>
-<form id='contact' ng-submit="postMessage(message)" action='/complete' method='post'>
-  <p id='form'>Your Name: </br>
-    <input type='text' name='name' maxlength='50' />
-  </p>
-  <p id='form'>E-mail Address: </br>
-    <input type='email' name='email' maxlength='50' />
-  </p>
-  <p id='form'>Subject: </br>
-    <input type='text' name='subject' maxlength='50' />
-  <p id='form'>Message:</p>
-    <textarea id='form' name='message' cols='60'rows='14'>Enter your message...</textarea>
-  </br>
-  <button type='button submit' class='btn' name='send' ui-sref='contact-complete'>Send Message!</button>
-</form>
-</div>
+  <div class='wrapper' ng-show='showForm'>
+    <div id='form'>
+        <p>Your Name: </br>
+          <input type='text' maxlength='50' ng-model='name' />
+        </p>
+        <p>E-mail Address: </br>
+          <input type='text' maxlength='50' ng-model='email' />
+        </p>
+        <p>Subject: </br>
+          <input type='text' maxlength='50' ng-model='subject' />
+        <p>Message:</p>
+          <textarea cols='60'rows='14' ng-model='message'>Enter your message...</textarea>
+        </br>
+        <button ng-click="addMessage(name, email, subject, message)">Send Message!</button>
+    </div>
 
-<div>
-  <img class='hands' src='https://photos.smugmug.com/Rustico-Warehouse/i-XfgMN38/0/XL/IMG_1126-XL.jpg'>
-</div>
+    <div class='hands'>
+      <img class= 'hand-pic' src='https://photos.smugmug.com/Rustico-Warehouse/i-XfgMN38/0/XL/IMG_1126-XL.jpg'>
+    </div>
+  </div>
+
+  <div ng-hide='showForm'>
+    <h3>Thanks for your message {{sender}}!!</h3>
+  </div>

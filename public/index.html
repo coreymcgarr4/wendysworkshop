@@ -12,13 +12,13 @@
 
   <nav>
     <ul>
-      <li><a ui-sref='cart'><span class='glyphicon glyphicon-shopping-cart'></span></a></li>
+      <!-- <li><a ui-sref='cart'><span class='glyphicon glyphicon-shopping-cart'></span></a></li> -->
       <li><a ui-sref='home'>Home</a></li>
       <li><a ui-sref='shop' ng-click='getProducts()'>Shop</a></li>
       <li><a ui-sref='about'>About</a></li>
       <li><a ui-sref='contact'>Contact</a></li>
-      <li class='searchbutton'><input type='button' value='Go!' ng-click='getSearch(query)' ui-sref='shop' /></li>
-      <li class='searchbar'><input type='text' ng-model='query' placeholder='Enter your search here...' /></li>
+      <button ng-click='getSearch(query)' class='searchbutton' ui-sref='shop'>Go!</button>
+      <input class='searchbar' type='text' ng-model='query' placeholder='Enter your search here...' />
 
     </ul>
   </nav>
@@ -27,11 +27,12 @@
 
   <footer>
     <p id='copyright'>Copyright 2017 Wendy's Workshop.</p>
-    <ul id='icons'>
-      <li><a href=''><i>Subscribe</i></a></li>
-      <li><a target='_blank' href='https://www.amazon.com/s?marketplaceID=ATVPDKIKX0DER&me=APO1L8G7FP0ES&merchant=APO1L8G7FP0ES&redirect=true'><i class="fa fa-amazon" aria-hidden="true"></i></a></li>
-      <li><a href=''><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-      <li><a href=''><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+    <ul>
+      <span class='icons'><a ui-sref='subscribe' /><i>Subscribe</i></a></span>
+      <span class='icons'><a target='_blank' href='https://www.amazon.com/s?marketplaceID=ATVPDKIKX0DER&me=APO1L8G7FP0ES&merchant=APO1L8G7FP0ES&redirect=true'><i class="fa fa-amazon" aria-hidden="true"></i></a></span>
+      <span class='icons'><a href=''><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
+      <span class='icons'><a href=''><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+    </ul>
   </footer>
 
 
@@ -40,6 +41,10 @@
   <script src='./js/app.js'></script>
   <script src="./js/shopCtrl.js"></script>
   <script src="./js/shopService.js"></script>
+  <script src="./js/subCtrl.js"></script>
+  <script src="./js/subService.js"></script>
+  <script src="./js/messCtrl.js"></script>
+  <script src="./js/messService.js"></script>
 
 </body>
 </html>

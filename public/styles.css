@@ -66,21 +66,6 @@ float: left;
 display: inline-block;;
 }
 
-.hands {
-  float:right;
-  margin-right: 10%;
-  width: 45%;
-  margin-top: 45px;
-  padding-left: 1%;
-}
-
-#contact {
-  float: left;
-  width: 30%;
-  margin-top: 50px;
-  margin-left: 10%;
-}
-
 #wendy {
   width: 45%;
   margin-left: 4%;
@@ -88,6 +73,13 @@ display: inline-block;;
   float: left;
   margin-right: 30px;
   margin-bottom: 45px;
+}
+
+#about {
+  float: left;
+  width: 47%;
+  margin-top: 50px;
+  font-size: 20px;
 }
 
 h3 {
@@ -110,13 +102,6 @@ footer {
   font-size: 12px;
 }
 
-#about {
-  float: left;
-  width: 47%;
-  margin-top: 50px;
-  font-size: 20px;
-}
-
 #copyright {
   font-family: 'Roboto Condensed', sans-serif;
   color: rgb(122, 118, 119);
@@ -124,7 +109,7 @@ footer {
   float: left;
 }
 
-#icons {
+.icons {
   margin-right: 5%;
 }
 
@@ -134,8 +119,32 @@ i {
   margin-right: 2%;
 }
 
+.hands {
+  /*margin-right: 5%;*/
+  width: 30%;
+  margin-top: 85px;
+  margin-right: 10%;
+  /*margin-left: 10%;*/
+}
+
+.hand-pic {
+  width: 100%;
+  /*margin-right: 10%;*/
+}
+
 #form {
   font-family: 'Slabo 27px', serif;
+  margin-right: 10%;
+  margin-left: 10%;
+  width: 40%;
+}
+
+.contact {
+  float: left;
+  width: 100%;
+  margin-top: 50px;
+  /*margin-left: 10%;
+  margin-right: 10%;*/
 }
 
 /*.form {
@@ -166,13 +175,10 @@ input {
   display: inline;
   list-style: none;
   text-decoration: none;
-  margin-right: 2%;
-  margin-top: -2px;
-  font-size: 16px;
   float: right;
-  /*width: 250px;*/
-  margin-left: 5px;
-  padding: 6px 12px;
+  width: 25px;
+  margin-right: 3%;
+  margin-left: 15px;
 }
 
 .searchbar {
@@ -182,12 +188,145 @@ input {
   list-style: none;
   text-decoration: none;
   margin-top: -2px;
-  margin-right: 2%;
+  margin-left: 1px;
+  /*margin-right: 2%;*/
   font-size: 16px;
   float: right;
   /*width: 20px;*/
 }
 
-button {
-  width: 2px;
+/*.result {
+  float: left;
+  width: 36%;
+  flex: auto;
+  justify-content: center;
+  /*height: 50px;*/
+  /*margin-bottom: 40px;
+  margin-top: 50px;
+  height: 500px;
+  padding-bottom: 25px;
+  flex-direction: column;
+}*/
+
+.thumbnail {
+  margin: auto;
+  border-style: none;
+  /*width: 50%;*/
+  height: 200px;
+}
+
+.title {
+  text-align: center;
+  height: 15%;
+  margin: auto;
+  width: 50%;
+  margin-top: 3%;
+  overflow: scroll;
+}
+
+.shop-now-button {
+  width: 150px;
+  margin: auto;
+  margin-top: 3%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.results {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 400px;
+  flex-direction: row;
+  float: left;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+@media all and (min-width: 0px) and (max-width: 939px){
+  .hands {
+    display: none;
+  }
+  #form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .contact {
+    margin: 0;
+    text-align: center;
+  }
+  #wendy {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    float: left;
+    margin-right: 10%;
+    /*margin-bottom: 45px;*/
+  }
+  #about {
+    float: left;
+    width: 80%;
+    margin-top: 20px;;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .results {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 400px;
+    flex-direction: row;
+    float: left;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .searchbar {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(122, 118, 119);
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+    margin-top: -2px;
+    margin-left: 1px;
+    /*margin-right: 2%;*/
+    font-size: 16px;
+    float: right;
+    width: 145px;
+  }
+  li {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(122, 118, 119);
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+    margin-left: 12%;
+    margin-top: 50px;
+    font-size: 16px;
+  }
+  .icons {
+    margin-left: 3%;
+    float: left;
+    display: flex;
+    margin-right: 1%;
+  }
 }
