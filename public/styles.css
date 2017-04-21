@@ -46,7 +46,6 @@ li {
   width: 25%;
   margin-top: 40px;
   margin-right: 4%;
-  /*margin-left: 4%;*/
   float: right;
   margin-bottom: 45px;
 }
@@ -62,8 +61,8 @@ li {
 }
 
 .welcome {
-float: left;
-display: inline-block;;
+  float: left;
+  display: inline-block;
 }
 
 #wendy {
@@ -123,25 +122,26 @@ footer {
 
 .icons {
   margin-right: 5%;
+  display: inline-flex;
+  flex-direction: row;
+  float: right;
+  margin-top: 0;
 }
 
 i {
   float: right;
-  display: inline;
+  display: inline-flex;
   margin-right: 2%;
 }
 
 .hands {
-  /*margin-right: 5%;*/
   width: 30%;
   margin-top: 85px;
   margin-right: 10%;
-  /*margin-left: 10%;*/
 }
 
 .hand-pic {
   width: 100%;
-  /*margin-right: 10%;*/
 }
 
 #form {
@@ -155,8 +155,6 @@ i {
   float: left;
   width: 100%;
   margin-top: 50px;
-  /*margin-left: 10%;
-  margin-right: 10%;*/
 }
 
 .btn {
@@ -210,10 +208,8 @@ button:focus {
   text-decoration: none;
   margin-top: -2px;
   margin-left: 1px;
-  /*margin-right: 2%;*/
   font-size: 16px;
   float: right;
-  /*width: 20px;*/
 }
 
 .searcher {
@@ -229,7 +225,6 @@ ul {
 .thumbnail {
   margin: auto;
   border-style: none;
-  /*width: 50%;*/
   height: 200px;
 }
 
@@ -301,6 +296,7 @@ ul {
   border-radius: 8px;
   border: 2px solid rgb(211, 211, 211);
 }
+
 .send-message-button:hover {
   background-color: rgb(211, 211, 211);
 }
@@ -370,7 +366,6 @@ ul {
     flex-wrap: wrap;
     margin-top: 30px;
   }
-
   .searchbar {
     font-family: 'Roboto Condensed', sans-serif;
     color: rgb(122, 118, 119);
@@ -379,7 +374,6 @@ ul {
     text-decoration: none;
     margin-top: -2px;
     margin-left: 1px;
-    /*margin-right: 2%;*/
     font-size: 16px;
     float: right;
     width: 145px;
@@ -395,10 +389,12 @@ ul {
     font-size: 16px;
   }
   .icons {
-    margin-left: 3%;
+    margin-left: 10px;;
     float: left;
-    display: flex;
+    display: inline-flex;
     margin-right: 1%;
+    flex-direction: row;
+    font-size: 12px;
   }
   .wrapper {
     width: 80%;
@@ -478,16 +474,23 @@ ul {
   }
   nav {
     background-color: rgb(236, 236, 236);
-    /*height: 60px;*/
+    height: 75px;
     width: 100%;
     margin: 0px;
     top:0;
     padding-top: 9px;
     position: fixed;
   }
-  .searcher {
+    .searcher {
     display: inline-flex;
     float: none;
-    justify-content: center;
+    margin-left: 28%;
   }
+  li {
+    display: inline;
+    text-align: center;
+  }
+  .tiny-nav{
+    margin-top: inherit;
+    margin-left: 20px;;
 }

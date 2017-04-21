@@ -69,7 +69,6 @@ app.get('/api/search/:query', function(req, res){
     })
   })
 
-
   app.post('/api/subscribers/:name/:email', function(req, res){
     db.add_subscriber([req.params.name, req.params.email], function(err, person){
       if (err){

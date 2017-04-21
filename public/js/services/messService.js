@@ -7,6 +7,4 @@ angular.module('app')
       url: 'http://138.68.244.0/api/messages' + '/' + name + '/' + email + '/' + subject + '/' + message
     })
   }
-
-
 })

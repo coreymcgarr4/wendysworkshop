@@ -12,8 +12,7 @@
 <body ng-controller='shopCtrl'>
 
   <nav>
-    <ul>
-      <!-- <li><a ui-sref='cart'><span class='glyphicon glyphicon-shopping-cart'></span></a></li> -->
+    <ul class='tiny-nav'>
       <li><a ui-sref='home'>Home</a></li>
       <li><a ui-sref='shop' ng-click='getProducts()'>Shop</a></li>
       <li><a ui-sref='about'>About</a></li>
@@ -29,11 +28,11 @@
 
   <footer>
     <p id='copyright'>Copyright 2017 Wendy's Workshop.</p>
-    <ul>
-      <span class='icons'><a ui-sref='subscribe' /><i>Subscribe</i></a></span>
-      <span class='icons'><a target='_blank' href='https://www.amazon.com/s?marketplaceID=ATVPDKIKX0DER&me=APO1L8G7FP0ES&merchant=APO1L8G7FP0ES&redirect=true'><i class="fa fa-amazon" aria-hidden="true"></i></a></span>
-      <span class='icons'><a href=''><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
-      <span class='icons'><a href=''><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+    <ul class='icons'>
+      <li class='icons'><a ui-sref='subscribe' /><i>Subscribe</i></a></li>
+      <li class='icons'><a target='_blank' href='https://www.amazon.com/s?marketplaceID=ATVPDKIKX0DER&me=APO1L8G7FP0ES&merchant=APO1L8G7FP0ES&redirect=true'><i class="fa fa-amazon" aria-hidden="true"></i></a></li>
+      <li class='icons'><a href=''><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li class='icons'><a href=''><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
     </ul>
   </footer>
 

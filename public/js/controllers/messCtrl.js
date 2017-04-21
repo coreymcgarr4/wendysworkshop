@@ -10,6 +10,4 @@ angular.module('app')
       console.log($scope.sender);
     });
   };
-
-
 });

@@ -12,7 +12,6 @@ angular.module('app')
       } else {
         $scope.items = results.data;
         console.log(results.data);
-        console.log(results.data[0].Error);
       }
     });
   };
@@ -25,4 +24,5 @@ angular.module('app')
   };
 
   $scope.getDefaultProducts();
+
 });

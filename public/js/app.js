@@ -19,10 +19,6 @@ angular.module('app', ['ui.router'])
     url: '/contact',
     controller: 'messCtrl'
   })
-  // .state('cart', {
-  //   templateUrl: '../views/cart.html',
-  //   url: '/cart'
-  // })
   .state('subscribe', {
     templateUrl: '../views/subscribe.html',
     url: '/subscribe',
