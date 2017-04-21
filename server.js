@@ -92,7 +92,7 @@ app.get('/api/search/:query', function(req, res){
     })
   })
 
-app.listen(3000, function(){
+app.listen(config.port, function(){
   console.log('Listening on 3000');
 })
 
