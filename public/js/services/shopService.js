@@ -4,7 +4,7 @@ angular.module('app')
 this.getASIN = function(){
   return $http({
     method: 'GET',
-    url: 'http://localhost:3000/api/productasin'
+    url: 'http://138.68.244.0/api/productasin'
   })
 }
 
@@ -12,7 +12,7 @@ this.getASIN = function(){
 
     return $http({
       method: 'GET',
-      url: 'http://localhost:3000/api/search/' + encodeURIComponent(query)
+      url: 'http://138.68.244.0/api/search/' + encodeURIComponent(query)
     })
   }
 });

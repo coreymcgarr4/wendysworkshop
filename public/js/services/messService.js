@@ -4,7 +4,7 @@ angular.module('app')
   this.addMessage = function(name, email, subject, message){
     return $http({
       method: 'POST',
-      url: 'http://localhost:3000/api/messages' + '/' + name + '/' + email + '/' + subject + '/' + message
+      url: 'http://138.68.244.0/api/messages' + '/' + name + '/' + email + '/' + subject + '/' + message
     })
   }
 

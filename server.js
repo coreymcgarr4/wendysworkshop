@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 var massiveInstance = massive.connectSync({
-  connectionString : 'postgres://localhost/coreymcgarr'
+  connectionString : config.postgresUrl
 });
 
 var client = amazon.createClient({

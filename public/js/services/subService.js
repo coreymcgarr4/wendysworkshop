@@ -4,7 +4,7 @@ angular.module('app')
   this.addSubscriber = function(name, email){
     return $http({
       method: 'POST',
-      url: 'http://localhost:3000/api/subscribers' + '/' + name + '/' + email
+      url: 'http://138.68.244.0/api/subscribers' + '/' + name + '/' + email
     })
   }
 
