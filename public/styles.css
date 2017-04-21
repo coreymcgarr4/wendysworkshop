@@ -216,6 +216,16 @@ button:focus {
   /*width: 20px;*/
 }
 
+.searcher {
+  display: inline-flex;
+  float: right;
+  margin-right: 4%;
+}
+
+ul {
+  display: inline-block;
+}
+
 .thumbnail {
   margin: auto;
   border-style: none;
@@ -293,6 +303,28 @@ button:focus {
 }
 .send-message-button:hover {
   background-color: rgb(211, 211, 211);
+}
+
+#beehive {
+  display: none;
+}
+
+@media all and (min-width: 940px) and (max-width: 1224px) {
+  #mainlogo {
+    width: 80%;
+    margin-top: 8%;
+    margin-left: 4.5%;
+    margin-right: 3%;
+  }
+  .text{
+    width: 32%;
+    float: left;
+    margin-top: 50px;
+    margin-left: 4.5%;
+    margin-right: 3%;
+    font-size: 16px;
+    text-align: center;
+  }
 }
 
 @media all and (min-width: 0px) and (max-width: 939px){
@@ -378,6 +410,84 @@ button:focus {
   }
   .send-message-button {
     width: 50%;
+  }
+  #mainlogo {
+    width: 75%;
+    margin-top: 5%;
+    margin-left: 4.5%;
+    margin-right: 3%;
+  }
+  .text{
+    width: 32%;
+    float: left;
+    margin-top: 50px;
+    margin-left: 4.5%;
+    margin-right: 3%;
+    font-size: 14px;
+    text-align: center;
+  }
+}
 
+@media all and (min-width: 0px) and (max-width: 800px) {
+  .chair {
+    display: none;
+  }
+  #mainlogo {
+    width: 50%;
+    margin-top: 4%;
+    margin-left: 4.5%;
+    margin-right: 3%;
+  }
+  .text{
+    width: 60%;
+    float: left;
+    margin-top: 45px;
+    margin-left: 4.5%;
+    margin-right: 3%;
+    font-size: 13px;
+    text-align: center;
+  }
+  .thread {
+    width: 25%;
+    margin-top: 40px;
+    margin-left: 4%;
+    float: left;
+    margin-bottom: 20px;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 570px) {
+  #mainlogo {
+    display: none;
+  }
+  .text{
+    width: 60%;
+    float: left;
+    margin-top: 45px;
+    margin-left: 4.5%;
+    margin-right: 3%;
+    font-size: 14px;
+    text-align: center;
+  }
+  #beehive {
+    display: block;
+    width: 50%;
+    margin-top: 8%;
+    margin: auto;
+    text-align: center;
+  }
+  nav {
+    background-color: rgb(236, 236, 236);
+    /*height: 60px;*/
+    width: 100%;
+    margin: 0px;
+    top:0;
+    padding-top: 9px;
+    position: fixed;
+  }
+  .searcher {
+    display: inline-flex;
+    float: none;
+    justify-content: center;
   }
 }

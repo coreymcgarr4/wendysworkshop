@@ -72,7 +72,17 @@ app.get('/api/search/:query', function(req, res){
 
   app.post('/api/subscribers/:name/:email', function(req, res){
     db.add_subscriber([req.params.name, req.params.email], function(err, person){
+      if (err){
+        console.log(err);
+        res.send(err);
+      }
       res.send(person);
+    })
+    db.add_message([req.params.name, req.params.email, req.params.email + ' subscribed', req.params.email + ' HAS SUBSCRIBED.'], function(err, person){
+      if (err){
+        console.log(err);
+        res.send(err);
+      }
     })
   })
 
@@ -81,7 +91,6 @@ app.get('/api/search/:query', function(req, res){
       res.send(message);
     })
   })
-
 
 app.listen(3000, function(){
   console.log('Listening on 3000');

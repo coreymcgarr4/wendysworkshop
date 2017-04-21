@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   </head>
 <body ng-controller='shopCtrl'>
 
@@ -17,9 +18,10 @@
       <li><a ui-sref='shop' ng-click='getProducts()'>Shop</a></li>
       <li><a ui-sref='about'>About</a></li>
       <li><a ui-sref='contact'>Contact</a></li>
-      <button ng-click='getSearch(query)' class='searchbutton' ui-sref='shop'>Go!</button>
+    </ul>
+    <ul class='searcher'>
       <input class='searchbar' type='text' ng-model='query' placeholder='Enter your search here...' />
-
+      <button ng-click='getSearch(query)' class='searchbutton' ui-sref='shop'>Go!</button>
     </ul>
   </nav>
 
@@ -45,6 +47,10 @@
   <script src="./js/subService.js"></script>
   <script src="./js/messCtrl.js"></script>
   <script src="./js/messService.js"></script>
+  <!-- <script src="https://cdn.auth0.com/js/lock/10.14/lock.min.js"></script>
+  <script src="node_modules/auth0-js/build/auth0.js"></script>
+  <script src="node_modules/angular-lock/dist/angular-lock.js"></script>
+  <script src="node_modules/angular-jwt/dist/angular-jwt.js"></script> -->
 
 </body>
 </html>

@@ -7,12 +7,13 @@ angular.module('app')
   $scope.getSearch = function(query){
     var promise = shopService.getSearch(query);
     promise.then(function(results){
-      if (results.data[0].Error === true){
+      if (results.data[0].Error){
         $scope.showError = false;
-      } else
-      $scope.items = results.data;
-      console.log(results.data);
-      console.log(results.data[0].Error);
+      } else {
+        $scope.items = results.data;
+        console.log(results.data);
+        console.log(results.data[0].Error);
+      }
     });
   };
 
