@@ -12,6 +12,7 @@ angular.module('app')
       } else {
         $scope.items = results.data;
         console.log(results.data);
+        $scope.showError = true;
       }
     });
   };
