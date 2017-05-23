@@ -11,6 +11,7 @@ angular.module('app')
         $scope.showError = false;
       } else {
         $scope.items = results.data;
+	$scope.showError= true;
         console.log(results.data);
         $scope.showError = true;
       }

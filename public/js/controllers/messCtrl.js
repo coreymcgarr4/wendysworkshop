@@ -6,8 +6,8 @@ angular.module('app')
   $scope.addMessage = function(name, email, subject, message){
     $scope.showForm = false;
     messService.addMessage(name, email, subject, message).then(function(results){
-      console.log('hello');
-      $scope.sender = name;
+     console.log(results);
+	 $scope.sender = name;
     });
   };
 });

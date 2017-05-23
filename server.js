@@ -10,6 +10,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
+function getRandomArbitrary(min, max) {
+   return Math.random() * (max - min) + min;
+}
+
 var massiveInstance = massive.connectSync({
   connectionString : config.postgresUrl
 });
@@ -29,7 +33,7 @@ app.get('/api/productasin', function(req, res){
       res.send(400).send(err);
       return;
     }
-    var asins = products.splice(0, 10);
+    var asins = products.splice(getRandomArbitrary(0, products.length - 10), 10);
     var asinArray = [];
     for (var i = 0; i < asins.length; i++){
       asinArray.push(asins[i].asin);
@@ -87,7 +91,7 @@ app.get('/api/search/:query', function(req, res){
 
   app.post('/api/messages/:name/:email/:subject/:message', function(req, res){
     db.add_message([req.params.name, req.params.email, req.params.subject, req.params.message], function(err, message){
-      res.send(message);
+      res.send(err);
     })
   })
 
