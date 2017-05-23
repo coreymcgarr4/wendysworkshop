@@ -8,7 +8,6 @@ angular.module('app')
     messService.addMessage(name, email, subject, message).then(function(results){
      console.log(results);
 	 $scope.sender = name;
-      console.log($scope.sender);
     });
   };
 });

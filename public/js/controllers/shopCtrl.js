@@ -13,6 +13,7 @@ angular.module('app')
         $scope.items = results.data;
 	$scope.showError= true;
         console.log(results.data);
+        $scope.showError = true;
       }
     });
   };
