@@ -6,7 +6,8 @@ angular.module('app')
   $scope.addSubscriber = function(name, email){
     $scope.showForm = false;
     subService.addSubscriber(name, email).then(function(results){
-      $scope.subscriber = results.data[0].name;
+	console.log(results);
+      $scope.subscriber = name;
       console.log($scope.subscriber);
     });
   };
